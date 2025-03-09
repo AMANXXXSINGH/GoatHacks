@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goatflix: The Baa-rilliant Streaming Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5dc;
+        }
+        h1 {
+            color: #654321;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px;
+        }
+        .gallery img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .goat-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #ffcc00;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .screen {
+            width: 80%;
+            max-width: 600px;
+            height: 300px;
+            background-color: black;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        video {
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🐐 Welcome to Goatflix! 🎬</h1>
+    <p>Enjoy the best goat content on the internet!</p>
+    
+    <div class="screen">
+        <video controls>
+            <source src="https://www.videvo.net/videvo_files/converted/2021_07/preview/210630_Goats_Stock_4K_035.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <div class="gallery">
+        <img src="https://placegoat.com/200" alt="Goat 1">
+        <img src="https://placegoat.com/201" alt="Goat 2">
+        <img src="https://placegoat.com/202" alt="Goat 3">
+    </div>
+    
+    <button class="goat-button" onclick="playGoatSound()">🎵 Play a Random Goat Sound</button>
+    
+    <audio id="goatSound1" src="https://www.myinstants.com/media/sounds/goat.mp3"></audio>
+    <audio id="goatSound2" src="https://www.myinstants.com/media/sounds/goat-yell.mp3"></audio>
+    
+    <script>
+        function playGoatSound() {
+            const sounds = ["goatSound1", "goatSound2"];
+            const randomSound = document.getElementById(sounds[Math.floor(Math.random() * sounds.length)]);
+            randomSound.play();
+        }
+    </script>
+</body>
+</html>
